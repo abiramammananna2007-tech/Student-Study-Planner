@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Study Planner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">Study Planner</div>
+        <nav>
+            <a href="#dashboard">Dashboard</a>
+            <a href="#tasks">My Tasks</a>
+            <a href="#timetable">Timetable</a>
+        </nav>
+    </header>
+
+    <main class="container">
+
+        <section id="dashboard">
+            <h1>Welcome to Your Study Planner!</h1>
+            <p>Plan your day. Improve your skills. Achieve your goals.</p>
+
+            <div class="stats">
+                <div class="card">
+                    <h2 id="totalTasks">0</h2>
+                    <p>Total Tasks</p>
+                </div>
+
+                <div class="card">
+                    <h2 id="completedTasks">0</h2>
+                    <p>Completed Tasks</p>
+                </div>
+
+                <div class="card">
+                    <h2 id="pendingTasks">0</h2>
+                    <p>Pending Tasks</p>
+                </div>
+            </div>
+
+            <div class="progress-box">
+                <h3>Study Progress</h3>
+                <div class="progress-bar">
+                    <div id="progressFill"></div>
+                </div>
+                <p id="progressText">0% Completed</p>
+            </div>
+        </section>
+
+        <section id="tasks">
+            <h2>My Study Tasks</h2>
+
+            <div class="task-form">
+                <input type="text" id="taskInput"
+                    placeholder="Enter your study task">
+
+                <select id="subjectInput">
+                    <option value="Mathematics">Mathematics</option>
+                    <option value="Python">Python</option>
+                    <option value="HTML">HTML</option>
+                    <option value="CSS">CSS</option>
+                    <option value="Cybersecurity">Cybersecurity</option>
+                    <option value="Other">Other</option>
+                </select>
+
+                <input type="date" id="dateInput">
+
+                <button onclick="addTask()">Add Task</button>
+            </div>
+
+            <div id="taskList"></div>
+        </section>
+
+        <section id="timetable">
+            <h2>My Daily Timetable</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Time</th>
+                        <th>Subject</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>9:00 AM</td>
+                        <td>Mathematics</td>
+                    </tr>
+
+                    <tr>
+                        <td>11:00 AM</td>
+                        <td>Python Programming</td>
+                    </tr>
+
+                    <tr>
+                        <td>2:00 PM</td>
+                        <td>HTML & CSS</td>
+                    </tr>
+
+                    <tr>
+                        <td>4:00 PM</td>
+                        <td>Cybersecurity</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Student Study Planner | Keep Learning, Keep Growing!</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
